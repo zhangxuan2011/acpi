@@ -1,13 +1,9 @@
-[workspace]
-members = ["tools/aml_tester", "tools/acpi_dumper", "tools/aml_test_tools", "tools/uacpi_test_adapter"]
-resolver = "2"
-
 [package]
-name = "acpi"
+name = "proka-acpi"
 version = "6.1.1"
-authors = ["Isaac Woods"]
-repository = "https://github.com/rust-osdev/acpi"
-description = "A pure-Rust library for interacting with ACPI"
+authors = ["zhangxuan2011"]
+repository = "https://github.com/zhangxuan2011/acpi"
+description = "A pure-Rust library for interacting with ACPI (FIXME)"
 categories = ["hardware-support", "no-std"]
 license = "MIT/Apache-2.0"
 edition = "2024"
@@ -17,12 +13,8 @@ bit_field = "0.10.2"
 bitflags = "2.5.0"
 log = "0.4.20"
 spinning_top = "0.3.0"
-pci_types = { version = "0.10.0", public = true }
+pci_types = "0.10.0"
 byteorder = { version = "1.5.0", default-features = false }
-
-[dev-dependencies]
-aml_test_tools = { path = "tools/aml_test_tools" }
-pretty_env_logger = "0.5.0"
 
 [features]
 default = ["alloc", "aml"]
